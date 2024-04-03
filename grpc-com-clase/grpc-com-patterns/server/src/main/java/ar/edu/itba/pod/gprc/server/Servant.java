@@ -12,4 +12,5 @@ public class Servant extends HealthServiceGrpc.HealthServiceImplBase {
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
+
 }
