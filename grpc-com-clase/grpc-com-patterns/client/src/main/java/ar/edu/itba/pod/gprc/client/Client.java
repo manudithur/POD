@@ -28,7 +28,7 @@ public class Client {
 //            HealthServiceGrpc.HealthServiceBlockingStub stub = HealthServiceGrpc.newBlockingStub(channel);
 //            PingResponse response = stub.ping(PingRequest.newBuilder().build());
 //            logger.info("Response: " + response.getMessage());
-            
+
             UserServiceGrpc.UserServiceBlockingStub stub = UserServiceGrpc.newBlockingStub(channel);
             User user = stub.doLogin(LoginInformation.newBuilder().setUserName("user").setPassword("pass").build());
             UserRoles roles = stub.getRoles(user);
